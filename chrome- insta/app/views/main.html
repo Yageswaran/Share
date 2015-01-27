@@ -1,0 +1,60 @@
+<div ng-controller="MainController" id="datetime">
+
+  <h3>#SayaJual</h3>
+  <h1>{{ date.raw | date:'hh mm ss' }}</h1>
+  <h2>{{ date.raw | date:'EEEE, MMMM yyyy' }}</h2>
+<div class="instagram" >
+    <table border = "1">
+    <tr>
+       <td><img class='instagram-image' src= {{pics[0]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[1]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[2]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[4]}} width='300px' ></td>
+    </tr>
+    <tr>
+       <td><img class='instagram-image' src= {{pics[5]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[6]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[7]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[8]}} width='300px' ></td>
+    </tr>
+    <tr>
+       <td><img class='instagram-image' src= {{pics[9]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[10]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[11]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[12]}} width='300px' ></td>
+    </tr>
+    <tr>
+       <td><img class='instagram-image' src= {{pics[13]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[14]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[15]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[16]}} width='300px' ></td>
+    </tr>
+    <tr>
+       <td><img class='instagram-image' src= {{pics[17]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[18]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[19]}} width='300px' ></td>
+        <td><img class='instagram-image' src= {{pics[20]}} width='300px' ></td>
+        
+    </tr>
+    
+        
+    </table>
+    </div>
+    </div>
+                                    
+  <div id="forecast">
+    <ul class="row list-unstyled">
+      <li ng-repeat="day in weather.forecast.forecastday" class="col-md-3">
+        <div ng-class="{today: $index == 0}">
+          <img class="{{ day.icon }}" ng-src="{{ day.icon_url }}" />
+          <h3>{{ day.high.fahrenheit }}</h3>
+          <h4 ng-if="$index == 0">Now</h4>
+          <h4 ng-if="$index != 0">{{ day.date.weekday }}</h4>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
